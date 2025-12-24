@@ -15,10 +15,11 @@ import {
 
 import {useDispatch} from "react-redux";
 import {useHttp} from "../../hooks/http.hook";
+import classNames from "classnames";
 
 
 const HeroesFilters = () => {
-    const {activeFilter, filters,filtersLoadingStatus} = useSelector(state => state);
+    const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -33,8 +34,9 @@ const HeroesFilters = () => {
 
     const renderFilters = (data) => {
         if (data.length > 0) {
-            return data.map(filter => {
-                return <button className="btn btn-outline-dark active" key={filter} value={filter}>{filter}</button>
+            return data.map(({name, className, label}) => {
+                const btnClass = classNames("btn", className, {'active': name === activeFilter});
+                return <button className={btnClass} key={name} id={name}>{label}</button>
             })
         }
     }
