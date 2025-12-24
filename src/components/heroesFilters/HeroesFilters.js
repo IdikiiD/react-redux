@@ -8,6 +8,7 @@
 import {useSelector} from "react-redux";
 import {useEffect} from "react";
 import {
+    activeFilterChanged,
     filtersFetched,
     filtersFetching,
     filtersFetchingError,
@@ -35,7 +36,7 @@ const HeroesFilters = () => {
         if (data.length > 0) {
             return data.map(({name, className, label}) => {
                 const btnClass = classNames("btn", className, {'active': name === activeFilter});
-                return <button className={btnClass} key={name} id={name}>{label}</button>
+                return <button className={btnClass} key={name} id={name} onClick={()=>{dispatch(activeFilterChanged(name))}}>{label}</button>
             })
         }
     }
