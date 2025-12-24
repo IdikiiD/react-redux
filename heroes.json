@@ -1,29 +1,119 @@
 {
-    "heroes": [
-        {
-            "id": 1,
-            "name": "Первый герой",
-            "description": "Первый герой в рейтинге!",
-            "element": "fire"
-        },
-        {
-            "id": 2,
-            "name": "Неизвестный герой",
-            "description": "Скрывающийся в тени",
-            "element": "wind"
-        },
-        {
-            "id": 3,
-            "name": "Морской герой",
-            "description": "Как аквамен, но не из DC",
-            "element": "water"
-        }
-    ],
-    "filters": [
-        "all",
-        "fire",
-        "water",
-        "wind",
-        "earth"
-    ]
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Первый герой",
+      "description": "Первый герой в рейтинге!",
+      "element": "fire"
+    },
+    {
+      "id": 2,
+      "name": "Неизвестный герой",
+      "description": "Скрывающийся в тени",
+      "element": "wind"
+    },
+    {
+      "id": 3,
+      "name": "Морской герой",
+      "description": "Как аквамен, но не из DC",
+      "element": "water"
+    },
+    {
+      "id": "3dc58406-c6a2-4d32-bede-562f038c1dd1",
+      "name": "Ivan Dikii",
+      "description": "ffff",
+      "element": "fire"
+    },
+    {
+      "id": "610e3b54-11cf-431c-92cd-112a84af7937",
+      "name": "dddd",
+      "description": "ааааааааа",
+      "element": "fire"
+    },
+    {
+      "id": "5b2d4518-56ce-41a4-aa47-f9831083efb3",
+      "name": "Ivan Dikii",
+      "description": "МММММММММММММ",
+      "element": "water"
+    },
+    {
+      "id": 4,
+      "name": "Ivan Dikii",
+      "description": "МММММММММММММ",
+      "element": "water"
+    },
+    {
+      "id": 5,
+      "name": "Ivan Dikii",
+      "description": "МММММММММММММ",
+      "element": "water"
+    },
+    {
+      "id": 6,
+      "name": "Ivan Dikii",
+      "description": "ААВЫАЫВАЫ",
+      "element": "water"
+    },
+    {
+      "id": 7,
+      "name": "Ivan Dikii",
+      "description": "ААВЫАЫВАЫ",
+      "element": "water"
+    },
+    {
+      "id": 8,
+      "name": "dddd",
+      "description": "FDFDFD",
+      "element": "fire"
+    },
+    {
+      "id": 9,
+      "name": "dddd",
+      "description": "FDFDFD",
+      "element": "fire"
+    },
+    {
+      "id": "9d8a12e7-c47b-401d-8152-e9f9c27b0e4c",
+      "name": "Ivan Dikii",
+      "description": "fdfdf",
+      "element": "fire"
+    },
+    {
+      "id": "bebe2760-6f54-479e-94fa-075ad1e6bf56",
+      "name": "Ivan Dikii",
+      "description": "выыыаафы",
+      "element": "water"
+    },
+    {
+      "id": "c3686c57-2e00-43c9-a95c-22709de206dc",
+      "name": "dddd",
+      "description": "efefe",
+      "element": ""
+    },
+    {
+      "id": "1e3748f1-4e31-4c62-99f9-0be32d7dcffd",
+      "name": "Ivan",
+      "description": "fefefe",
+      "element": ""
+    },
+    {
+      "id": "f55d0fcc-50c1-4d57-ae65-4228242fa6af",
+      "name": "dddd",
+      "description": "vvv",
+      "element": "fire"
+    },
+    {
+      "id": "f9960e75-2919-4f7a-b864-5997a59793b2",
+      "name": "dddd",
+      "description": "ffff",
+      "element": "fire"
+    }
+  ],
+  "filters": [
+    "all",
+    "fire",
+    "water",
+    "wind",
+    "earth"
+  ]
 }
