@@ -16,3 +16,10 @@ export const heroesFetchingError = () => {
         type: 'HEROES_FETCHING_ERROR'
     }
 }
+
+export const addHerro  = (hero) => {
+    return {
+        type: 'ADD_HERO',
+         payload: hero
+    }
+}
