@@ -46,3 +46,9 @@ export const activeFilterChanged = (filter) => {
         payload: filter
     }
 }
+export const deleteHero = (id) => {
+    return {
+        type: 'DELETE_HERO',
+        payload: id
+    }
+}
