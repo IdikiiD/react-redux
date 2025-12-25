@@ -1,4 +1,9 @@
-const HeroesListItem = ({ name, description, element }) => {
+
+const HeroesListItem = ({ name, description, element, onDelete  }) => {
+
+
+
+
 	let elementClassName;
 
 	switch (element) {
@@ -18,6 +23,10 @@ const HeroesListItem = ({ name, description, element }) => {
 			elementClassName = "bg-warning bg-gradient";
 	}
 
+
+
+
+
 	return (
 		<li
 			className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}
@@ -34,6 +43,7 @@ const HeroesListItem = ({ name, description, element }) => {
 			</div>
 			<span className="position-absolute top-0 start-100 translate-middle badge border rounded-pill bg-light">
 				<button
+                    onClick={onDelete}
 					type="button"
 					className="btn-close btn-close"
 					aria-label="Close"
