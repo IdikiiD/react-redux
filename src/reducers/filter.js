@@ -28,6 +28,8 @@ const filter = (state = initialState, action) => {
                 activeFilter: action.payload,
 
             }
+        default:
+            return state
 
     }
 }
