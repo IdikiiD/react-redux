@@ -20,7 +20,7 @@ import classNames from "classnames";
 
 
 const HeroesFilters = () => {
-    const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state);
+    const {activeFilter, filters, filtersLoadingStatus} = useSelector(state => state.filters);
     const dispatch = useDispatch();
     const {request} = useHttp();
 
