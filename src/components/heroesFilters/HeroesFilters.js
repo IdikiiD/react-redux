@@ -8,7 +8,7 @@
 import {useSelector} from "react-redux";
 import {useEffect} from "react";
 import {
-    activeFilterChanged,
+    activeFilterChanged, fetchFilters,
     filtersFetched,
     filtersFetching,
     filtersFetchingError,
@@ -25,10 +25,7 @@ const HeroesFilters = () => {
     const {request} = useHttp();
 
     useEffect(() => {
-        dispatch(filtersFetching());
-        request("http://localhost:3001/filters")
-            .then(data => dispatch(filtersFetched(data)))
-            .catch(() => dispatch(filtersFetchingError()))
+dispatch(fetchFilters(request))
 
     }, []);
 
