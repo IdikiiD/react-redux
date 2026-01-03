@@ -15,10 +15,10 @@ const heroesSlice = createSlice({
             state.heroes = action.payload;
         },
         heroesFetchingError: (state) => {state.heroesLoadingStatus = 'error'},
-        herroAdded: (state, action) => {
+        addHerro: (state, action) => {
             state.heroes.push(action.payload);
         },
-        heroDeleted: (state, action) => {
+        deleteHero: (state, action) => {
             state.heroes = state.heroes.filter(hero => hero.id !== action.payload);
         }
 
@@ -31,6 +31,6 @@ export const {
     heroesFetching,
     heroesFetched,
     heroesFetchingError,
-    herroAdded,
-    heroDeleted
+    addHerro,
+    deleteHero
 } = actions;
