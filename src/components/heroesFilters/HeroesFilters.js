@@ -1,18 +1,9 @@
-// Задача для этого компонента:
-// Фильтры должны формироваться на основании загруженных данных
-// Фильтры должны отображать только нужных героев при выборе
-// Активный фильтр имеет класс active
-// Изменять json-файл для удобства МОЖНО!
-// Представьте, что вы попросили бэкенд-разработчика об этом
+
 
 import {useSelector} from "react-redux";
 import {useEffect} from "react";
-import {
-    activeFilterChanged, fetchFilters,
-    filtersFetched,
-    filtersFetching,
-    filtersFetchingError,
-} from "../../actions";
+import {fetchFilters,} from "../../actions";
+import {activeFilterChanged} from "./filterSlice";
 
 import {useDispatch} from "react-redux";
 import {useHttp} from "../../hooks/http.hook";
