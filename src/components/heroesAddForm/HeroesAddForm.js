@@ -6,6 +6,7 @@ import {v4 as uuidv4} from 'uuid';
 import {useHttp} from '../../hooks/http.hook';
 import {selectAll} from "../heroesFilters/filterSlice";
 import store from "../../store";
+import {useCreateHeroMutation} from "../../api/apiSlice";
 
 
 const HeroesAddForm = () => {
@@ -13,6 +14,8 @@ const HeroesAddForm = () => {
     const [herroName, setHerroName] = useState('')
     const [herroDescription, setHerroDescription] = useState('')
     const [herroElement, setHerroElement] = useState('')
+
+    const [createHero, {isLoading}] = useCreateHeroMutation();
 
     const {filtersLoadingStatus} = useSelector(selectAll);
     const filters = selectAll(store.getState());
@@ -30,12 +33,7 @@ const HeroesAddForm = () => {
             element: herroElement
         }
 
-        request("http://localhost:3001/heroes", "POST", JSON.stringify(newHerro))
-            .then(res => console.log(res, 'Отправка успешна'))
-            .then(() => {
-                dispatch(addHerro(newHerro))
-            })
-            .catch(err => console.log(err))
+        createHero(newHerro).unwrap();
 
 
         setHerroName("");
