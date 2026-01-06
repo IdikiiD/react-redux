@@ -1,13 +1,14 @@
-import {useHttp} from '../../hooks/http.hook';
-import {useCallback, useEffect, useMemo} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+
+import {useCallback,  useMemo} from 'react';
+import {useSelector} from 'react-redux';
 import {useGetHeroesQuery} from "../../api/apiSlice";
 
 
-import {deleteHero, fetchHeroes, filteredHeroesSelector} from './heroesSlice';
+
+import {useDeleteHeroMutation} from "../../api/apiSlice";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
-import {createSelector} from "reselect";
+
 
 
 const HeroesList = () => {
@@ -15,9 +16,9 @@ const HeroesList = () => {
         data: heroes = [],
         isLoading,
         isError,
-        isFetching,
-        isSuccess
     } = useGetHeroesQuery();
+
+    const [deleteHero] = useDeleteHeroMutation();
 
     const activeFilter = useSelector(state => state.filters.activeFilter);
     const filteredHeroes = useMemo(() => {
@@ -32,18 +33,10 @@ const HeroesList = () => {
 
 
 
-    const dispatch = useDispatch();
-    const {request} = useHttp();
-
-    useEffect(() => {
-        dispatch(fetchHeroes())
-
-    }, []);
 
 
     const onDelete = useCallback((id) => {
-        request(`http://localhost:3001/heroes/${id}`, "DELETE").then(dispatch(deleteHero(id))).catch(err => console.log(err))
-    }, [request])
+       deleteHero(id).unwrap();})
 
     if (isLoading) {
         return <Spinner/>;
